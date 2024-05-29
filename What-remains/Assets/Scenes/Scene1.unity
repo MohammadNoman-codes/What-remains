@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.09394804, g: 0.12323858, b: 0.13207549, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  m_AmbientIntensity: 0.61
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -435,7 +435,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 2
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5949,7 +5949,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -11556,7 +11556,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -11650,7 +11650,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 1
-  m_Range: 20
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -13441,6 +13441,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 463042, guid: 0e2d311aa2f76c2479ed7bbf11aa4ffb, type: 3}
   m_PrefabInstance: {fileID: 454397398}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &456938554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1125399416289184358, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_Name
+      value: Character_Skeleton_Soldier_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360564113494436979, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31061ac033c636f4c9c6425ae9adc846, type: 3}
 --- !u!1001 &457569377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46551,7 +46612,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 1
-  m_Range: 20
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -48341,7 +48402,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.22352943, g: 0.8431373, b: 0.9725491, a: 1}
   m_Intensity: 2
-  m_Range: 20
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -56631,7 +56692,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.22352941, g: 0.84313726, b: 0.972549, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -62823,7 +62884,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.81960785, b: 0.21176471, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
