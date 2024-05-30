@@ -127,15 +127,21 @@ public class PlayerController : MonoBehaviour
     {
         if (characterController.isGrounded && context.performed)
         {
-            JumpAttack();
+            StartCoroutine(JumpAttack());
         }
     }
 
-    private void JumpAttack()
+    private IEnumerator JumpAttack()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            isAttacking = true;
             animator.Play("JumpAttack");
+            staminaManager.DecreaseStamina(35);
+            staminaManager.timeSinceLastPress = 0f;
+
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+            isAttacking = false;
         }
     }
 
