@@ -5,7 +5,7 @@ public class StaminaManager : MonoBehaviour
     public StaminaBar staminaBar;
     private int maxStamina = 100;
     private float currentStamina; // Use float for smoother increments
-    private float timeSinceLastPress;
+    public float timeSinceLastPress;
     private float regenerationDelay = 5f;
     private float regenerationRate = 50f; // Amount of stamina regenerated per second
 
@@ -15,14 +15,14 @@ public class StaminaManager : MonoBehaviour
         currentStamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
         timeSinceLastPress = 0f;
-        Debug.Log("Starting Stamina: " + currentStamina);
+        //Debug.Log("Starting Stamina: " + currentStamina);
     }
 
     // Update is called once per frame
     void Update()
     {
         // Check if the 'J' key is pressed
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             DecreaseStamina(20);
             timeSinceLastPress = 0f; // Reset the timer
@@ -38,7 +38,14 @@ public class StaminaManager : MonoBehaviour
             {
                 RegenerateStamina();
             }
+        }*/
+
+        if (timeSinceLastPress >= regenerationDelay)
+        {
+            RegenerateStamina();
         }
+        timeSinceLastPress += Time.deltaTime;
+
     }
 
     public void SetMaxStamina(int stamina)
@@ -55,7 +62,7 @@ public class StaminaManager : MonoBehaviour
         Debug.Log("Current Stamina set to: " + currentStamina);
     }
 
-    private void DecreaseStamina(int amount)
+    public void DecreaseStamina(int amount)
     {
         currentStamina -= amount;
         if (currentStamina < 0)
@@ -63,7 +70,7 @@ public class StaminaManager : MonoBehaviour
             currentStamina = 0;
         }
         staminaBar.SetCurrentStamina(currentStamina);
-        Debug.Log("Stamina decreased. Current Stamina: " + currentStamina);
+        //Debug.Log("Stamina decreased. Current Stamina: " + currentStamina);
     }
 
     private void RegenerateStamina()

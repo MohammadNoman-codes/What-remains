@@ -28,12 +28,16 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
     private Animator animator;
+    private StaminaManager staminaManager;
+
+    private bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        staminaManager = FindAnyObjectByType<StaminaManager>();
     }
 
     // Update is called once per frame
@@ -99,17 +103,23 @@ public class PlayerController : MonoBehaviour
 
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed)
+        if (characterController.isGrounded && context.performed && !isAttacking)
         {
-            Attack();
+            StartCoroutine(Attack());
         }
     }
 
-    private void Attack()
+    private IEnumerator Attack()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
+            isAttacking = true;
             animator.Play("Attack");
+            staminaManager.DecreaseStamina(20);
+            staminaManager.timeSinceLastPress = 0f;
+
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+            isAttacking = false;
         }
     }
 
