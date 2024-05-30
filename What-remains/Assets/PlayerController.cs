@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Rotate();
+        Attack();
         
     }
 
@@ -92,6 +93,39 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         verticalvelocity = Mathf.Sqrt(jumpHeight * gravity);
+    }
+
+
+    public void onAttack(InputAction.CallbackContext context)
+    {
+        if (characterController.isGrounded && context.performed)
+        {
+           Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            animator.Play("Attack");
+        }
+    }
+
+    public void onJumpAttack(InputAction.CallbackContext context)
+    {
+        if (characterController.isGrounded && context.performed)
+        {
+            JumpAttack();
+        }
+    }
+
+    private void JumpAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            animator.Play("JumpAttack");
+        }
     }
 
 
