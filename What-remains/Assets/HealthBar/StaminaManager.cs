@@ -22,7 +22,7 @@ public class StaminaManager : MonoBehaviour
     void Update()
     {
         // Check if the 'J' key is pressed
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             DecreaseStamina(20);
             timeSinceLastPress = 0f; // Reset the timer
