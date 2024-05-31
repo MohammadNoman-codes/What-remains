@@ -4,7 +4,6 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
     public HealthBar healthBar;
 
     void Start()
@@ -43,5 +42,14 @@ public class HealthManager : MonoBehaviour
     public void CollectHealthPickup(int healAmount)
     {
         Heal(healAmount);
+    }
+
+    // Method to increase max health
+    public void IncreaseMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        currentHealth = maxHealth; // Optional: fully heal the player when max health is increased
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetCurrentHealth(currentHealth);
     }
 }

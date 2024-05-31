@@ -87,4 +87,13 @@ public class StaminaManager : MonoBehaviour
             Debug.Log("Stamina regenerated. Current Stamina: " + currentStamina);
         }
     }
+
+    // Method to increase max stamina
+    public void IncreaseMaxStamina(int amount)
+    {
+        maxStamina += amount;
+        currentStamina = maxStamina; // Optional: fully replenish stamina when max stamina is increased
+        staminaBar.SetMaxStamina(maxStamina);
+        staminaBar.SetCurrentStamina(currentStamina);
+    }
 }
