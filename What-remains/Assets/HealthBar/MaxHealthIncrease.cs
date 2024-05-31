@@ -5,6 +5,13 @@ public class MaxHealthIncrease : MonoBehaviour
     private const int collectiblesToIncreaseHealth = 3;
     private const int healthIncreaseAmount = 20;
     private static int collectiblesCollected = 0;
+    public float rotationSpeed = 50f; // Adjust the speed as needed
+
+    void Update()
+    {
+        // Rotate the collectible slowly
+        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+    }
 
     void OnTriggerEnter(Collider other)
     {
