@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: a3511243c28fc294aa06346b329af814
+guid: 44723abdc7998df41955a53b7f0c0500
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Footstep: {instanceID: 0}
-  - jumpSound: {fileID: 8300000, guid: 304f2bf2228cba94e91cd22803e54bcf, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
