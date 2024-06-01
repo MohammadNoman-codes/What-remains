@@ -7,7 +7,7 @@ public class SceneMov : MonoBehaviour
 {
     public string[] levelScenes = { "Scene1", "Scene2", "Scene3", "Scene4" }; // Add the names of your 4 levels
     private int currentLevelIndex = 0;
-    public float sceneLoadDelay = 1f; // Time in seconds to wait before loading the next scene
+    public float sceneLoadDelay = 0.0002f; // Time in seconds to wait before loading the next scene
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +19,8 @@ public class SceneMov : MonoBehaviour
 
             // Load the next level scene after a delay
             StartCoroutine(LoadNextLevelWithDelay());
+
+           
         }
     }
 
