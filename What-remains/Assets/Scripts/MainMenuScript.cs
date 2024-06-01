@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections; // Add this line
 
 public class MainMenu : MonoBehaviour
 {
@@ -10,19 +11,23 @@ public class MainMenu : MonoBehaviour
 
     public void ShowInstructions()
     {
-        // Load the instructions scene
-        SceneManager.LoadScene("InstructionsScene");
+        StartCoroutine(LoadSceneWithDelay("InstructionsScene", 0.5f));
     }
 
     public void ShowCredits()
     {
-        // Load the credits scene
-        SceneManager.LoadScene("CreditsScene");
+        StartCoroutine(LoadSceneWithDelay("CreditsScene", 0.5f));
     }
 
     public void QuitGame()
     {
         // Quit the application
         Application.Quit();
+    }
+
+    private IEnumerator LoadSceneWithDelay(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }
