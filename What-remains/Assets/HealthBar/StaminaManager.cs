@@ -4,7 +4,7 @@ public class StaminaManager : MonoBehaviour
 {
     public StaminaBar staminaBar;
     private int maxStamina = 100;
-    private float currentStamina; // Use float for smoother increments
+    public float currentStamina; // Use float for smoother increments
     public float timeSinceLastPress;
     private float regenerationDelay = 5f;
     private float regenerationRate = 50f; // Amount of stamina regenerated per second

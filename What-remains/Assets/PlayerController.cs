@@ -103,15 +103,28 @@ public class PlayerController : MonoBehaviour
 
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed && !isAttacking)
+        /*if (characterController.isGrounded && context.performed && !isAttacking)
         {
-            StartCoroutine(Attack());
+           if (staminaManager.currentStamina > 0)
+            {
+                StartCoroutine(Attack());
+            }
+        }*/
+
+        if (!isAttacking)
+        {
+            if (staminaManager.currentStamina > 0)
+            {
+                StartCoroutine(Attack());
+            }
+               
         }
+
     }
 
     private IEnumerator Attack()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             isAttacking = true;
             animator.Play("Attack");
@@ -120,29 +133,59 @@ public class PlayerController : MonoBehaviour
 
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             isAttacking = false;
-        }
+        }*/
+
+        isAttacking = true;
+        animator.Play("Attack");
+        staminaManager.DecreaseStamina(20);
+        staminaManager.timeSinceLastPress = 0f;
+        
+        yield return new WaitForSeconds(2);
+        isAttacking = false;
+
+
     }
 
     public void onJumpAttack(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed)
+        /*if (characterController.isGrounded && context.performed && !isAttacking)
         {
-            StartCoroutine(JumpAttack());
+            if (staminaManager.currentStamina > 0)
+            {
+                StartCoroutine(JumpAttack());
+            }
+        }*/
+
+        if (!isAttacking)
+        {
+            if (staminaManager.currentStamina > 0)
+            {
+                StartCoroutine(JumpAttack());
+            }
         }
     }
 
     private IEnumerator JumpAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             isAttacking = true;
             animator.Play("JumpAttack");
             staminaManager.DecreaseStamina(35);
             staminaManager.timeSinceLastPress = 0f;
 
-            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+            yield return new WaitForSeconds(2);
             isAttacking = false;
-        }
+        }*/
+
+        isAttacking = true;
+        animator.Play("JumpAttack");
+        staminaManager.DecreaseStamina(35);
+        staminaManager.timeSinceLastPress = 0f;
+        Debug.Log("Now we will wait for this specifc time");
+        Debug.Log(2);
+        yield return new WaitForSeconds(2);
+        isAttacking = false;
     }
 
 
