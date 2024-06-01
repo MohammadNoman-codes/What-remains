@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8397e07b33e7bec46bd6379b3e8a8117
+guid: ce2b1ea0a7f527546a507944c4797f15
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -43,10 +43,10 @@ ModelImporter:
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 110
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
-      level: -0.95
+      level: -0.9
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -62,21 +62,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.4144144
-        functionName: StartDealDamage
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.7072072
-        functionName: EndDealDamage
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

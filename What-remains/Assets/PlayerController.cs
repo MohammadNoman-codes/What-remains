@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 rotation;
     private float verticalvelocity;
 
-
+    public GameObject currentWeapon;
 
 
     private CharacterController characterController;
@@ -188,5 +188,14 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
     }
 
+    public void StratDealDamage()
+    {
+        currentWeapon.GetComponentInChildren<DamageDealer>().StartDealDamage();
+    }
+
+    public void EndDealDamage()
+    {
+        currentWeapon.GetComponentInChildren<DamageDealer>().EndDealDamage();
+    }
 
 }
