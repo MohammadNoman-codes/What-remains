@@ -11448,6 +11448,7 @@ Transform:
   m_PrefabInstance: {fileID: 372721673}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &372920939
 GameObject:
   m_ObjectHideFlags: 0
@@ -11497,6 +11498,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 2eaeb67 (all game)
 =======
 >>>>>>> parent of 2eaeb67 (all game)
 --- !u!1001 &373964596
@@ -12887,7 +12890,11 @@ Transform:
   - {fileID: 1265678377}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+  m_RootOrder: 8
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   m_RootOrder: 8
 >>>>>>> parent of 2eaeb67 (all game)
@@ -17566,7 +17573,11 @@ RectTransform:
   - {fileID: 1002351975}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 6
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   m_RootOrder: 6
 >>>>>>> parent of 2eaeb67 (all game)
@@ -23929,6 +23940,7 @@ Transform:
   m_PrefabInstance: {fileID: 714284651}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &719837611
 GameObject:
   m_ObjectHideFlags: 0
@@ -23997,6 +24009,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 2eaeb67 (all game)
 =======
 >>>>>>> parent of 2eaeb67 (all game)
 --- !u!1001 &723888637
@@ -28037,6 +28051,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 2eaeb67 (all game)
+=======
 >>>>>>> parent of 2eaeb67 (all game)
 --- !u!1001 &823455131
 PrefabInstance:
@@ -31618,6 +31635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Footstep: {fileID: 1415866974}
+<<<<<<< HEAD
+>>>>>>> parent of 2eaeb67 (all game)
+=======
 >>>>>>> parent of 2eaeb67 (all game)
 --- !u!1001 &922103375
 PrefabInstance:
@@ -34083,7 +34103,11 @@ Transform:
   - {fileID: 92366481}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 7
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   m_RootOrder: 7
 >>>>>>> parent of 2eaeb67 (all game)
@@ -46148,6 +46172,7 @@ Transform:
   m_PrefabInstance: {fileID: 1334168580}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1334650639
 GameObject:
   m_ObjectHideFlags: 3
@@ -46354,10 +46379,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1b5a637a2abea174d9aff7195a85a687, type: 3}
   m_PrefabInstance: {fileID: 1337110178}
 =======
+=======
+>>>>>>> parent of 2eaeb67 (all game)
 --- !u!4 &1338335593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 466356, guid: 749ac805017ffb642834e61134421373, type: 3}
   m_PrefabInstance: {fileID: 1195907810}
+<<<<<<< HEAD
+>>>>>>> parent of 2eaeb67 (all game)
+=======
 >>>>>>> parent of 2eaeb67 (all game)
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1344868580
@@ -58485,6 +58515,7 @@ MonoBehaviour:
   - Scene1
   - Scene2
 <<<<<<< HEAD
+<<<<<<< HEAD
   sceneLoadDelay: 3
 --- !u!82 &1686341052
 AudioSource:
@@ -58582,6 +58613,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  sceneLoadDelay: 1
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   sceneLoadDelay: 1
 >>>>>>> parent of 2eaeb67 (all game)
@@ -65168,7 +65202,11 @@ Transform:
   - {fileID: 653354925}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   m_RootOrder: 9
 >>>>>>> parent of 2eaeb67 (all game)
@@ -69136,6 +69174,7 @@ MonoBehaviour:
   - Scene1
   - Scene2
 <<<<<<< HEAD
+<<<<<<< HEAD
   sceneLoadDelay: 3
 --- !u!82 &2000076834
 AudioSource:
@@ -69233,6 +69272,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  sceneLoadDelay: 1
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   sceneLoadDelay: 1
 >>>>>>> parent of 2eaeb67 (all game)
@@ -71874,7 +71916,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+  m_RootOrder: 10
+>>>>>>> parent of 2eaeb67 (all game)
 =======
   m_RootOrder: 10
 >>>>>>> parent of 2eaeb67 (all game)
