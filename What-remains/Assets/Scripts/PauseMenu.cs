@@ -1,16 +1,17 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+
     public GameObject pauseMenu;
     public static bool isPaused;
-
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
+        pauseMenu.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -20,9 +21,9 @@ public class PauseMenu : MonoBehaviour
         {
             if (isPaused)
             {
-                StartCoroutine(ResumeGameWithDelay(0.5f));
+                ResumeGame();
             }
-            else
+            else 
             {
                 PausedGame();
             }
@@ -38,12 +39,6 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        StartCoroutine(ResumeGameWithDelay(0.5f));
-    }
-
-    private IEnumerator ResumeGameWithDelay(float delay)
-    {
-        yield return new WaitForSecondsRealtime(delay); // Use WaitForSecondsRealtime to work properly when time is scaled to 0
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -51,12 +46,6 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        StartCoroutine(LoadMainMenuWithDelay(0.5f));
-    }
-
-    private IEnumerator LoadMainMenuWithDelay(float delay)
-    {
-        yield return new WaitForSecondsRealtime(delay); // Use WaitForSecondsRealtime to work properly when time is scaled to 0
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenuScene");
     }
@@ -65,4 +54,5 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
