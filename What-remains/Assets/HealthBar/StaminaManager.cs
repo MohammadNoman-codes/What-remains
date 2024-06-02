@@ -52,14 +52,14 @@ public class StaminaManager : MonoBehaviour
     {
         maxStamina = stamina;
         staminaBar.SetMaxStamina(stamina);
-        Debug.Log("Max Stamina set to: " + maxStamina);
+        //Debug.Log("Max Stamina set to: " + maxStamina);
     }
 
     public void SetCurrentStamina(float stamina)
     {
         currentStamina = stamina;
         staminaBar.SetCurrentStamina((int)stamina);
-        Debug.Log("Current Stamina set to: " + currentStamina);
+        //Debug.Log("Current Stamina set to: " + currentStamina);
     }
 
     public void DecreaseStamina(int amount)
@@ -84,7 +84,7 @@ public class StaminaManager : MonoBehaviour
                 currentStamina = maxStamina;
             }
             staminaBar.SetCurrentStamina(currentStamina);
-            Debug.Log("Stamina regenerated. Current Stamina: " + currentStamina);
+            //Debug.Log("Stamina regenerated. Current Stamina: " + currentStamina);
         }
     }
 

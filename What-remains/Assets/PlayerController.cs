@@ -23,7 +23,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 rotation;
     private float verticalvelocity;
 
+<<<<<<< Updated upstream
 
+=======
+    public GameObject currentWeapon;
+>>>>>>> Stashed changes
 
 
     private CharacterController characterController;
@@ -188,5 +192,17 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
     }
 
+<<<<<<< Updated upstream
+=======
+    public void StratDealDamage()
+    {
+        currentWeapon.GetComponentInChildren<DamageDealer>().StartDealDamage();
+    }
+
+    public void EndDealDamage()
+    {
+        currentWeapon.GetComponentInChildren<DamageDealer>().EndDealDamage();
+    }
+>>>>>>> Stashed changes
 
 }
