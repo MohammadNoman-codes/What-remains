@@ -7,7 +7,9 @@ public class SceneMov : MonoBehaviour
 {
     public string[] levelScenes = { "Scene1", "Scene2", "Scene3", "Scene4" }; // Add the names of your 4 levels
     private int currentLevelIndex = 0;
-    public float sceneLoadDelay = 1f; // Time in seconds to wait before loading the next scene
+    public float sceneLoadDelay = 3f; // Time in seconds to wait before loading the next scene
+    public AudioSource audioSource; // The audio source component
+    public AudioClip transitionSound; // The sound to play during the scene transition
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,9 @@ public class SceneMov : MonoBehaviour
         {
             // Increment the current level index immediately
             IncrementLevelIndex();
+
+            // Play the transition sound
+            PlayTransitionSound();
 
             // Load the next level scene after a delay
             StartCoroutine(LoadNextLevelWithDelay());
@@ -27,6 +32,19 @@ public class SceneMov : MonoBehaviour
         // Increment the current level index
         currentLevelIndex++;
         Debug.Log($"Current level index: {currentLevelIndex}");
+    }
+
+    private void PlayTransitionSound()
+    {
+        // Check if the audio source and clip are set
+        if (audioSource != null && transitionSound != null)
+        {
+            audioSource.PlayOneShot(transitionSound);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or transitionSound not set.");
+        }
     }
 
     private IEnumerator LoadNextLevelWithDelay()

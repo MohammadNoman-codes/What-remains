@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,14 +22,20 @@ public class PlayerController : MonoBehaviour
     private Vector3 rotation;
     private float verticalvelocity;
 
-
-
-
     private CharacterController characterController;
     private Animator animator;
     private StaminaManager staminaManager;
 
     private bool isAttacking = false;
+
+    [SerializeField]
+    private AudioSource audioSource; // The audio source component
+
+    [SerializeField]
+    private AudioClip attackSoundH; // Sound for attack H
+
+    [SerializeField]
+    private AudioClip attackSoundQ; // Sound for attack Q
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +43,11 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         staminaManager = FindAnyObjectByType<StaminaManager>();
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -46,7 +56,6 @@ public class PlayerController : MonoBehaviour
         Move();
         Rotate();
         Attack();
-
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -60,7 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-
     }
 
     private void Move()
@@ -100,7 +108,6 @@ public class PlayerController : MonoBehaviour
         verticalvelocity = Mathf.Sqrt(jumpHeight * gravity);
     }
 
-
     public void onAttack(InputAction.CallbackContext context)
     {
         if (characterController.isGrounded && context.performed && !isAttacking)
@@ -117,6 +124,9 @@ public class PlayerController : MonoBehaviour
             animator.Play("Attack");
             staminaManager.DecreaseStamina(20);
             staminaManager.timeSinceLastPress = 0f;
+
+            // Play the attack sound
+            PlayAttackSound(attackSoundH);
 
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             isAttacking = false;
@@ -140,10 +150,19 @@ public class PlayerController : MonoBehaviour
             staminaManager.DecreaseStamina(35);
             staminaManager.timeSinceLastPress = 0f;
 
+            // Play the jump attack sound
+            PlayAttackSound(attackSoundQ);
+
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             isAttacking = false;
         }
     }
 
-
+    private void PlayAttackSound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
 }

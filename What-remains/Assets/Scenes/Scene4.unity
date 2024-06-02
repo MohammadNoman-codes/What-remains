@@ -36664,6 +36664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125504460}
   - component: {fileID: 1125504459}
+  - component: {fileID: 1125504461}
   m_Layer: 0
   m_Name: SceneSound
   m_TagString: Untagged
@@ -36681,7 +36682,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ab6df97753bcf544688118b92968f240, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -36782,6 +36783,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125504461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125504458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6199ef66838e9ae4b8505bc98fc4a95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstAudioClip: {fileID: 8300000, guid: ebc6e65f38e000e4bb8903a68c61b817, type: 3}
+  loopAudioClip: {fileID: 8300000, guid: ab6df97753bcf544688118b92968f240, type: 3}
 --- !u!1001 &1131847170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81928,7 +81943,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c0c40e171fb68ba42a6a9ed6d94e2ac5, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -82211,6 +82226,9 @@ MonoBehaviour:
   lookSenesitivity: 15
   jumpHeight: 0.8
   gravity: 9.81
+  audioSource: {fileID: 1903672986}
+  attackSoundH: {fileID: 8300000, guid: b9ee8118e1dd5d44fa197288f3d79bc1, type: 3}
+  attackSoundQ: {fileID: 8300000, guid: d49210e074959034da33bbb82cd0035a, type: 3}
 --- !u!143 &1903672994
 CharacterController:
   m_ObjectHideFlags: 0
@@ -89864,7 +89882,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012631693}
-  m_LocalRotation: {x: 0.30629748, y: 0.000000016379374, z: -0.000000005270272, w: 0.9519359}
+  m_LocalRotation: {x: 0.30629748, y: 0.000000016379373, z: -0.0000000052702718, w: 0.9519359}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
