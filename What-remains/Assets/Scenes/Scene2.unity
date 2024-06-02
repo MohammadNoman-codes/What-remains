@@ -852,8 +852,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelScenes:
-  - Scene1
   - Scene2
+  - Scene3
   sceneLoadDelay: 3
   audioSource: {fileID: 41297694}
   transitionSound: {fileID: 8300000, guid: dfd4b4c058fd6a6409eb39d14b813178, type: 3}
@@ -11636,7 +11636,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1001 &511307135
 PrefabInstance:
@@ -49461,7 +49461,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717245011}
-  m_LocalRotation: {x: 0.3060453, y: -0.000000016380769, z: 0.000000005265933, w: 0.95201695}
+  m_LocalRotation: {x: 0.3060453, y: 0.000000016380765, z: -0.0000000052659317, w: 0.95201695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
