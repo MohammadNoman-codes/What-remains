@@ -8,6 +8,7 @@ public class SpearTrap : MonoBehaviour
     public float maxY = 5f; // Maximum Y position for the spear
     public float freezeTimeAtMax = 0.5f; // Time in seconds to freeze at max Y
     public float freezeTimeAtMin = 0.5f; // Time in seconds to freeze at min Y
+    public int damageAmount = 10; // Amount of damage to apply to the player
 
     private Vector3 startPosition;
     private Coroutine spearMovementCoroutine;
@@ -59,5 +60,17 @@ public class SpearTrap : MonoBehaviour
         transform.position = new Vector3(transform.position.x, minY, transform.position.z);
         yield return new WaitForSeconds(freezeTimeAtMin);
         transform.position = startPosition;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            HealthManager playerHealth = other.GetComponent<HealthManager>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
+            }
+        }
     }
 }

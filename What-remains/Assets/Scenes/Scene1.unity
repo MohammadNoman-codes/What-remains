@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32342,7 +32342,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815113249}
-  m_LocalRotation: {x: 0.32326594, y: 0.00000003256508, z: -0.000000011124474, w: 0.9463082}
+  m_LocalRotation: {x: 0.32326594, y: -0.00000003256508, z: 0.000000011124474, w: 0.9463082}
   m_LocalPosition: {x: 0.03, y: 9.079013, z: -27.364162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -56805,6 +56805,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64727002231938044, guid: bb5451e0ed4ccd14f946993edded0944, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57470,7 +57474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105092702}
-  m_LocalRotation: {x: 0.34042525, y: -0.00000002288009, z: 0.000000008283735, w: 0.9402716}
+  m_LocalRotation: {x: 0.34042525, y: 0.0000000228801, z: -0.000000008283737, w: 0.9402716}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -68307,6 +68311,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.18823816
       objectReference: {fileID: 0}
+    - target: {fileID: 64509403232994950, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64822207004734494, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -68340,7 +68352,7 @@ MonoBehaviour:
   rotationSpeed: 45
   minAngle: -45
   maxAngle: 45
-  speedMultiplier: 1
+  speedMultiplier: 5
   damageAmount: 10
 --- !u!1001 &1307165314
 PrefabInstance:
@@ -85366,6 +85378,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.14465062
       objectReference: {fileID: 0}
+    - target: {fileID: 64509403232994950, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64822207004734494, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85399,7 +85419,7 @@ MonoBehaviour:
   rotationSpeed: 45
   minAngle: -45
   maxAngle: 45
-  speedMultiplier: 1
+  speedMultiplier: 5
   damageAmount: 10
 --- !u!1001 &1544720425
 PrefabInstance:
@@ -86409,6 +86429,7 @@ MonoBehaviour:
   maxY: 5
   freezeTimeAtMax: 0.5
   freezeTimeAtMin: 0.5
+  damageAmount: 10
 --- !u!1 &1568529174
 GameObject:
   m_ObjectHideFlags: 0
@@ -91361,6 +91382,7 @@ MonoBehaviour:
   speedMultiplier: 10
   movementSpeed: 2
   Trail: {fileID: 1317717374}
+  damage: 20
 --- !u!1001 &1737476592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114114,7 +114136,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124497779}
-  m_LocalRotation: {x: 0.32326588, y: 0.000000016282542, z: -0.0000000055622356, w: 0.9463082}
+  m_LocalRotation: {x: 0.32326588, y: -0.000000016282542, z: 0.0000000055622356, w: 0.9463082}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

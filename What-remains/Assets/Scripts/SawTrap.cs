@@ -6,6 +6,7 @@ public class SawTrap : MonoBehaviour
     public float minAngle = -45f; // Minimum angle of rotation
     public float maxAngle = 45f; // Maximum angle of rotation
     public float speedMultiplier = 1f; // Multiplier to adjust the rotation speed
+    public int damageAmount = 10; // Amount of damage to apply to the player
 
     private bool isRotatingClockwise = true;
 
@@ -37,6 +38,18 @@ public class SawTrap : MonoBehaviour
             if (transform.localEulerAngles.z <= minAngle)
             {
                 isRotatingClockwise = true;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            HealthManager playerHealth = other.GetComponent<HealthManager>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
             }
         }
     }

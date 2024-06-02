@@ -8,6 +8,7 @@ public class SawTrapController : MonoBehaviour
     public float speedMultiplier = 1f; // Multiplier to adjust the rotation speed
     public float movementSpeed = 2f; // Speed at which the saw trap moves left and right (units per second)
     public GameObject Trail; // Reference to the GameObject that defines the trail
+    public int damage = 20; // Amount of damage to apply to the player
 
     private bool isRotatingClockwise = true;
     private bool isMovingRight = true;
@@ -93,6 +94,17 @@ public class SawTrapController : MonoBehaviour
             {
                 isMovingRight = true;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the collided object has a HealthManager component
+        HealthManager healthManager = other.GetComponent<HealthManager>();
+        if (healthManager != null)
+        {
+            // Apply damage to the player
+            healthManager.TakeDamage(damage);
         }
     }
 }
