@@ -8265,7 +8265,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278463274}
-  m_LocalRotation: {x: 0.518631, y: 0.0014556393, z: -0.0008829739, w: 0.85499656}
+  m_LocalRotation: {x: 0.518631, y: 0.0014556923, z: -0.00088300597, w: 0.85499656}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12864,7 +12864,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594248124}
-  m_LocalRotation: {x: 0.5340972, y: 0.0014393554, z: -0.00090931647, w: 0.84542143}
+  m_LocalRotation: {x: 0.5340972, y: 0.0014393717, z: -0.00090932666, w: 0.84542143}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22375,10 +22375,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 199708, guid: 749ac805017ffb642834e61134421373, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 993257932}
+      addedObject: {fileID: 993257936}
     - targetCorrespondingSourceObject: {fileID: 199708, guid: 749ac805017ffb642834e61134421373, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 993257936}
+      addedObject: {fileID: 993257937}
   m_SourcePrefab: {fileID: 100100000, guid: 749ac805017ffb642834e61134421373, type: 3}
 --- !u!4 &993257930 stripped
 Transform:
@@ -22390,24 +22390,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 199708, guid: 749ac805017ffb642834e61134421373, type: 3}
   m_PrefabInstance: {fileID: 993257929}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &993257932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993257931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e536b46c811661245b864d88a1d0eca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelScenes:
-  - Scene3
-  - Scene4
-  sceneLoadDelay: 3
-  audioSource: {fileID: 993257936}
-  transitionSound: {fileID: 8300000, guid: dfd4b4c058fd6a6409eb39d14b813178, type: 3}
 --- !u!82 &993257936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22504,6 +22486,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &993257937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993257931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c8e6843b5d0fb4a85d9cee1ba337e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  transitionSound: {fileID: 8300000, guid: dfd4b4c058fd6a6409eb39d14b813178, type: 3}
 --- !u!1001 &994366331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25764,6 +25760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 1158634423}
+  currentStamina: 0
   timeSinceLastPress: 0
 --- !u!114 &1201036909
 MonoBehaviour:
@@ -25906,9 +25903,7 @@ MonoBehaviour:
   lookSenesitivity: 15
   jumpHeight: 0.8
   gravity: 9.81
-  audioSource: {fileID: 1201036904}
-  attackSoundH: {fileID: 8300000, guid: b9ee8118e1dd5d44fa197288f3d79bc1, type: 3}
-  attackSoundQ: {fileID: 8300000, guid: d49210e074959034da33bbb82cd0035a, type: 3}
+  currentWeapon: {fileID: 0}
 --- !u!143 &1201036912
 CharacterController:
   m_ObjectHideFlags: 0
@@ -37222,10 +37217,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 125656, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1854091686}
+      addedObject: {fileID: 1854091690}
     - targetCorrespondingSourceObject: {fileID: 125656, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1854091690}
+      addedObject: {fileID: 1854091691}
   m_SourcePrefab: {fileID: 100100000, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
 --- !u!4 &1854091684 stripped
 Transform:
@@ -37237,24 +37232,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 125656, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
   m_PrefabInstance: {fileID: 1854091683}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1854091686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854091685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e536b46c811661245b864d88a1d0eca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelScenes:
-  - Scene3
-  - Scene4
-  sceneLoadDelay: 3
-  audioSource: {fileID: 993257936}
-  transitionSound: {fileID: 8300000, guid: dfd4b4c058fd6a6409eb39d14b813178, type: 3}
 --- !u!82 &1854091690
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37351,6 +37328,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1854091691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854091685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c8e6843b5d0fb4a85d9cee1ba337e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  transitionSound: {fileID: 8300000, guid: dfd4b4c058fd6a6409eb39d14b813178, type: 3}
 --- !u!1 &1874796086
 GameObject:
   m_ObjectHideFlags: 0
@@ -38922,7 +38913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990792557}
-  m_LocalRotation: {x: 0.5030347, y: 0.0014713976, z: -0.0008564092, w: 0.86426455}
+  m_LocalRotation: {x: 0.5030347, y: 0.0014714916, z: -0.0008564639, w: 0.86426455}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44624,7 +44615,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053452492}
-  m_LocalRotation: {x: 0.518631, y: 0.0014556288, z: -0.00088296755, w: 0.8549965}
+  m_LocalRotation: {x: 0.518631, y: 0.0014557025, z: -0.0008830123, w: 0.8549965}
   m_LocalPosition: {x: -3.8239381, y: 4.7649617, z: 0.35927463}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
